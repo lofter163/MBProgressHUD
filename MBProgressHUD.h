@@ -424,6 +424,11 @@ typedef void (^MBProgressHUDCompletionBlock)();
  */
 @property (assign, getter = isSquare) BOOL square;
 
+/**
+ * Annal background color.
+ */
+@property (MB_STRONG) UIColor *annalBackColor;
+
 @end
 
 
@@ -460,6 +465,11 @@ typedef void (^MBProgressHUDCompletionBlock)();
  * Defaults to translucent white (alpha 0.1)
  */
 @property (nonatomic, MB_STRONG) UIColor *backgroundTintColor;
+
+/**
+ * Annal background color.
+ */
+@property (nonatomic, MB_STRONG) UIColor *annalBackColor;
 
 /*
  * Display mode - NO = round or YES = annular. Defaults to round.
