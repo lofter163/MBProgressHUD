@@ -500,8 +500,10 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
             MBRoundProgressView *processView = MB_AUTORELEASE([[MBRoundProgressView alloc] init]);
 			self.indicator = processView;
             if (self.annalBackColor) {
-                self.indicator.width = 51;
-                self.indicator.height = 51;
+                CGRect newFrame = self.indicator.frame;
+                newFrame.size.width = 51;
+                newFrame.size.height = 51;
+                self.indicator.frame = newFrame;
                 processView.annalBackColor = self.annalBackColor;
             }
 			[self addSubview:indicator];
